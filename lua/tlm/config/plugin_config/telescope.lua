@@ -1,4 +1,3 @@
-
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
@@ -78,3 +77,25 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
+
+-- |extensions|
+
+local todo_ok, _ = pcall(require, "todo-comments")
+if not todo_ok then
+  print("telescope can't find todo-comments ignoring bindings!")
+  return
+else
+  vim.keymap.set('n', '<leader>sT', function() vim.cmd('TodoTelescope keywords=TODO,FIX') end,
+    { desc = '[S]earch [T]odos' })
+end
+
+local project_ok, _ = pcall(require, "neovim-project")
+if not project_ok then
+  print("telescope can't find project.neovim ignoring bindings!")
+  return
+else
+  vim.keymap.set('n', '<leader>sp', function() vim.cmd(':Telescope neovim-project history') end,
+    { desc = '[S]earch [P]rojects (recent)' })
+  vim.keymap.set('n', '<leader>sP', function() vim.cmd(':Telescope neovim-project discover') end,
+    { desc = '[S]earch [P]rojects (from pattern)' })
+end

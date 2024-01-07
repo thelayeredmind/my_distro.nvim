@@ -1,28 +1,12 @@
 -- This is where I load plugins for appearence, look and feel
 return {
 
--- themes 
-  {
-    "EdenEast/nightfox.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
-
-  {
-  "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
-  opts = {},
-  },
+  -- themes
 
   {
     -- Theme inspired by Atom
     'rebelot/kanagawa.nvim',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'kanagawa'
-    end,
   },
 
   {
