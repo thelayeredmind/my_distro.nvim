@@ -1,5 +1,11 @@
 -- This is where I load plugins that help me to navigate the IDE
 
+local build_string_fzf = 'make'
+if (vim.loop.os_uname().sysname == 'Windows_NT')
+then
+  build_string_fzf =
+  'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+end
 return {
 
   -- Fuzzy Finder (files, lsp, etc)
@@ -16,14 +22,14 @@ return {
         -- TODO: Check why telescope-fzf is disabled, eventho windows has built it
         -- NOTE: If you are having trouble with this installation,
         --       refer to the README for telescope-fzf-native for more instructions.
-        build =
-        'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
+        build = build_string_fzf,
         cond = function()
           return vim.fn.executable 'make' == 1
         end,
       },
     },
   },
+  -- TODO: Replace neovim-project with https://github.com/natecraddock/workspaces.nvim
   {
     "coffebar/neovim-project",
     opts = {

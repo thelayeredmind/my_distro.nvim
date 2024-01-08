@@ -1,0 +1,1 @@
+-- TODO: Implement a fancy path segmented in components https://www.reddit.com/r/neovim/comments/zz5ov1/gist_highlight_the_repo_root_in_your_statusline/

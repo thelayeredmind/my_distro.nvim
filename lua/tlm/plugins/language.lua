@@ -1,0 +1,3 @@
+-- Language specific addons for lsp and tree-sitter, dap, etc...
+-- TODO: Add https://github.com/mrcjkb/haskell-tools.nvim to plugins
+return {}
