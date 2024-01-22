@@ -30,5 +30,5 @@ return {
     main = 'ibl',
     opts = {},
   },
-
+  -- TODO: Add a Dashboard https://github.com/nvimdev/dashboard-nvim
 }

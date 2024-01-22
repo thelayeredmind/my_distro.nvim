@@ -20,7 +20,8 @@ return {
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-
+  -- TODO: Add https://github.com/nvim-pack/nvim-spectre
 
 
 }
+-- TODO: Look into more customization options https://github.com/nvim-lualine/lualine.nvim

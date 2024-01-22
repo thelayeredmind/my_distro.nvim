@@ -82,11 +82,12 @@ return {
   },
   -- Source Control with Git
   -- TODO: Research: How to use git in fugitive: Diffing, Merging, Exploring History
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
+  'tpope/vim-fugitive', -- Local Git functionality
+  'tpope/vim-rhubarb',  -- (git)Hub counterpart to fugitive, see :GBrowse
 
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
+    -- Shows information directly inside the file
     'lewis6991/gitsigns.nvim',
     opts = {
       -- See `:help gitsigns.txt`
@@ -168,5 +169,8 @@ return {
       -- refer to the configuration section below
     }
   }
-
+  -- TODO: Add https://github.com/folke/trouble.nvim
+  -- TODO: Add Copilot https://github.com/zbirenbaum/copilot.lua
+  -- TODO: Add Markdown/LatEx preview https://github.com/frabjous/knap
+  -- TODO: Add Test Runner https://github.com/klen/nvim-test
 }

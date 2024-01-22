@@ -1,1 +1,4 @@
 -- Everything related to languages and formatting
+-- TODO: Look into LuaSnip
+-- TODO: Look into and Add carbonnow https://github.com/ellisonleao/carbon-now.nvim
+-- TODO: Find out how to query LSP or TreeSitter for languages used in a project to add conditional Language specific support
