@@ -50,6 +50,12 @@ return {
     lazy = false,
     priority = 100,
   },
+  {
+    'echasnovski/mini.files',
+    version = '*',
+    config = true
+  }
+
   -- TODO: Look into marks and https://github.com/LeonHeidelbach/trailblazer.nvim
   -- TODO: Telescope agrolens https://github.com/desdic/agrolens.nvim?tab=readme-ov-file
 
