@@ -24,4 +24,3 @@ return {
 
 
 }
--- TODO: Look into more customization options https://github.com/nvim-lualine/lualine.nvim
