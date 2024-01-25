@@ -1,4 +1,5 @@
 -- [[ Basic Keymaps ]]
+-- TODO: Make abstract function that ensures a module can load, executes a callback if it can or throws a warning skipping it if it can't
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
@@ -69,7 +70,7 @@ vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by 
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
 
--- |extensions|
+-- |telescope extensions|
 
 local todo_ok, _ = pcall(require, "todo-comments")
 if not todo_ok then
@@ -80,13 +81,3 @@ else
     { desc = '[S]earch [T]odos' })
 end
 
-local project_ok, _ = pcall(require, "neovim-project")
-if not project_ok then
-  print("telescope can't find project.neovim ignoring bindings!")
-  return
-else
-  vim.keymap.set('n', '<leader>sp', function() vim.cmd(':Telescope neovim-project history') end,
-    { desc = '[S]earch [P]rojects (recent)' })
-  vim.keymap.set('n', '<leader>sP', function() vim.cmd(':Telescope neovim-project discover') end,
-    { desc = '[S]earch [P]rojects (from pattern)' })
-end

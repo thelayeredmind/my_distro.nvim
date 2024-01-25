@@ -9,3 +9,6 @@ local function live_grep_git_root()
 end
 
 vim.api.nvim_create_user_command('LiveGrepGitRoot', live_grep_git_root, {})
+
+require('telescope').load_extension('projects')
+require('telescope').load_extension('agrolens')

@@ -168,6 +168,14 @@ return {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     }
+  },
+  {
+    "dasupradyumna/launch.nvim",
+    dependencies = {
+        'mfussenegger/nvim-dap',
+        'rcarriga/nvim-notify',
+    },
+    config = true
   }
   -- TODO: Add https://github.com/folke/trouble.nvim
   -- TODO: Add Copilot https://github.com/zbirenbaum/copilot.lua
