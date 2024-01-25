@@ -21,6 +21,18 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
   -- TODO: Add https://github.com/nvim-pack/nvim-spectre
-
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
+  -- TODO: Configure Spectre
+  {
+    'nvim-pack/nvim-spectre',
+    dependencies = {
+      'nvim-lua/plenary.nvim'
+    },
+    config = true
+  }
 
 }
