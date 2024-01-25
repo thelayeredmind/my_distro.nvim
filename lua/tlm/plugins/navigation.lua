@@ -47,7 +47,16 @@ return {
   },
   {
     "ahmedkhalf/project.nvim",
-
+    config = function()
+      require("project_nvim").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end,
+    keys = {
+      { "<leader>sp", mode = {"n"}, function() require'telescope'.extensions.projects.projects{} end, desc = "Search Projects"}
+    }
   },
   {
     -- TODO: deleting files with mini files keeps their buffer
@@ -66,10 +75,9 @@ return {
     opts = {},
     -- stylua: ignore
     keys = {
-      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-      { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-      { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-      { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" }, 
+      { "<leader>fs", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+      { "<leader>Fs", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+      { "Rs", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" }, 
       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
   }
