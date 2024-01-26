@@ -33,7 +33,6 @@ return {
         -- online, please don't ask me how to install them :)
         ensure_installed = {
           -- Update this to ensure that you have the debuggers for the langs you want
-          'delve',
         },
       }
 
@@ -84,6 +83,7 @@ return {
   -- TODO: Research: How to use git in fugitive: Diffing, Merging, Exploring History
   'tpope/vim-fugitive', -- Local Git functionality
   'tpope/vim-rhubarb',  -- (git)Hub counterpart to fugitive, see :GBrowse
+  'junegunn/gv.vim',
 
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
@@ -172,8 +172,8 @@ return {
   {
     "dasupradyumna/launch.nvim",
     dependencies = {
-        'mfussenegger/nvim-dap',
-        'rcarriga/nvim-notify',
+      'mfussenegger/nvim-dap',
+      'rcarriga/nvim-notify',
     },
     config = true
   }
