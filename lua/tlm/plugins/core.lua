@@ -61,8 +61,7 @@ return {
         end, { desc = 'Format current buffer with LSP' })
       end
 
-
-      print("Hello from autoformat.lua")
+      -- print("Hello from autoformat.lua")
       local format_is_enabled = true
       vim.api.nvim_create_user_command('KickstartFormatToggle', function()
         format_is_enabled = not format_is_enabled
@@ -269,7 +268,7 @@ return {
     event = "BufEnter",
     opts = {
       -- Add languages to be installed here that you want installed for treesitter
-      ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'haskell', 'elm' },
+      ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'markdown', 'typescript', 'vimdoc', 'vim', 'bash', 'haskell', 'elm' },
       modules = {},
       sync_install = false,
       ignore_install = {},
