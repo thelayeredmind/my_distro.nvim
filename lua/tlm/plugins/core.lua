@@ -61,7 +61,7 @@ return {
         end, { desc = 'Format current buffer with LSP' })
       end
 
-      
+
       print("Hello from autoformat.lua")
       local format_is_enabled = true
       vim.api.nvim_create_user_command('KickstartFormatToggle', function()
