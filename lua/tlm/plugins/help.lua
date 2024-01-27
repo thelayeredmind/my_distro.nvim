@@ -2,7 +2,12 @@
 
 return {
   { 'folke/which-key.nvim', opts = {} },
-  -- TODO: Add https://github.com/AckslD/nvim-neoclip.lua
+  -- TODO: Configure trouble, neoclip and hardtime
+  {
+    "AckslD/nvim-neoclip.lua",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    opts = {}
+  },
   {
     "m4xshen/hardtime.nvim",
     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
