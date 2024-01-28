@@ -1,4 +1,4 @@
--- Very simple without the core no candy. This is the heart of the IDE
+-- Very simple without the core no candy. This is the heart of the IDEcore
 -- TODO: Refactor out some elements: check if core can be separated from language addons, and if config can be put in config folder for more modularity
 -- TODO: Research: Mason LSPs and Treesitter languages, how to install, *also those not listed*
 -- TODO: Fix that double defined lspconfig, i think the second one is autoformat check: https://github.com/nvim-lua/kickstart.nvim/blob/master/lua/kickstart/plugins/autoformat.lua
@@ -280,10 +280,10 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = '<c-space>',
-          node_incremental = '<c-space>',
-          scope_incremental = '<c-s>',
-          node_decremental = '<M-space>',
+          init_selection = 'vt',
+          node_incremental = 'grn',
+          scope_incremental = 'grc',
+          node_decremental = 'grm',
         },
       },
       textobjects = {
