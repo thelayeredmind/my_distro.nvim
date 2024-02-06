@@ -1,11 +1,10 @@
-
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
 -- Set highlight on search
 vim.o.hlsearch = false
-
+vim.o.fileformats = "unix,dos"
 -- Make line numbers default
 vim.wo.number = true
 vim.o.relativenumber = true
